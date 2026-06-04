@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>Component: Mega Dropdown</title>
+</head>
+<body>
+  <header class="c-header">
+    <div class="c-header__wrapper">
+      <div class="c-logo">
+        <img class="c-logo__image" src="/src/assets/images/logo.png" alt="Logo">
+        <a class="c-logo__name" href="#">Tierhof Morgenlicht</a>
+      </div>
+      <nav class="c-nav">
+        <ul class="c-nav__list">
+          <li class="c-nav__item">
+            <a class="c-nav__link" href="#">Unsere Tiere</a>
+            <div class="c-nav__dropdown">
+              <div class="c-nav__dropdown-inner">
+
+                <div class="c-nav__dropdown-column">
+                  <span class="c-nav__dropdown-headline">Hunde</span>
+                  <ul class="c-nav__dropdown-list">
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Alle Hunde</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Welpen</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Kleine Hunde</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Mittlere Hunde</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Große Hunde</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="c-nav__dropdown-column">
+                  <span class="c-nav__dropdown-headline">Katzen</span>
+                  <ul class="c-nav__dropdown-list">
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Alle Katzen</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Kitten</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Wohnungskatzen</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Freigänger</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="c-nav__dropdown-column">
+                  <span class="c-nav__dropdown-headline">Kleintiere</span>
+                  <ul class="c-nav__dropdown-list">
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Alle Kleintiere</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Kaninchen</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Meerschweinchen</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Vögel</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Ratten &#38; Mäuse</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Hamster</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="c-nav__dropdown-column">
+                  <span class="c-nav__dropdown-headline">Besondere Fälle</span>
+                  <ul class="c-nav__dropdown-list">
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Senioren</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Notfälle</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="c-nav__item">
+            <a class="c-nav__link" href="#">Adoption</a>
+            <div class="c-nav__dropdown">
+              <div class="c-nav__dropdown-inner">
+                <div class="c-nav__dropdown-column">
+                  <span class="c-nav__dropdown-headline">Ablauf &#38; Infos</span>
+                  <ul class="c-nav__dropdown-list">
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">So funktioniert die Vermittlung</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Vermittlungsprozess</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Schutzgebühr &#38; Vertrag</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="c-nav__dropdown-column">
+                  <span class="c-nav__dropdown-headline">Voraussetzungen</span>
+                  <ul class="c-nav__dropdown-list">
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Was du mitbringen musst</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Wohnungscheck</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Tiere für Anfänger</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="c-nav__dropdown-column">
+                  <span class="c-nav__dropdown-headline">Formulare</span>
+                  <ul class="c-nav__dropdown-list">
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Adoptionsformular</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Pflegestellenbewerbung</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Patenschaft übernehmen</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="c-nav__dropdown-column">
+                  <span class="c-nav__dropdown-headline">Nach der Adoption</span>
+                  <ul class="c-nav__dropdown-list">
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Eingewöhnungshilfe</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Erste Tage im neuen Zuhause</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="c-nav__item">
+            <a class="c-nav__link" href="#">Über uns</a>
+            <div class="c-nav__dropdown">
+              <div class="c-nav__dropdown-inner">
+                <div class="c-nav__dropdown-column">
+                  <span class="c-nav__dropdown-headline">Wer wir sind</span>
+                  <ul class="c-nav__dropdown-list">
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Unser Team</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Unsere Geschichte</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Unsere Philosophie</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="c-nav__dropdown-column">
+                  <span class="c-nav__dropdown-headline">Einblicke</span>
+                  <ul class="c-nav__dropdown-list">
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Bildgalerie</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Happy Ends</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Tierheim-Alltag</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="c-nav__dropdown-column">
+                  <span class="c-nav__dropdown-headline">Partner &#38; Support</span>
+                  <ul class="c-nav__dropdown-list">
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Sponsoren</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Kooperationen</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Unterstützer werden</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="c-nav__dropdown-column">
+                  <span class="c-nav__dropdown-headline">Tierheim-Infos</span>
+                  <ul class="c-nav__dropdown-list">
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Anfahrt &#38; Öffnungszeiten</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">FAQ</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Kontaktformular</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="c-nav__item">
+            <a class="c-nav__link" href="#">Helfen</a>
+            <div class="c-nav__dropdown">
+              <div class="c-nav__dropdown-inner">
+                <div class="c-nav__dropdown-column">
+                  <span class="c-nav__dropdown-headline">Spenden</span>
+                  <ul class="c-nav__dropdown-list">
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Geldspenden</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Sachspenden</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Wunschliste</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="c-nav__dropdown-column">
+                  <span class="c-nav__dropdown-headline">Mithelfen</span>
+                  <ul class="c-nav__dropdown-list">
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Ehrenamtlich helfen</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Gassi gehen</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Katzen kuscheln</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Pflegestelle werden</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="c-nav__dropdown-column">
+                  <span class="c-nav__dropdown-headline">Patenschaften</span>
+                  <ul class="c-nav__dropdown-list">
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Werde Tierpate</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Monatliche Patenschaft</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Geschenkpatenschaften</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="c-nav__dropdown-column">
+                  <span class="c-nav__dropdown-headline">Mitgliedschaft</span>
+                  <ul class="c-nav__dropdown-list">
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Fördermitglied werden</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Vorteile und Beitrag</a>
+                    </li>
+                    <li class="c-nav__dropdown-item">
+                      <a class="c-nav__dropdown-link" href="#">Beitrittsformular</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <search>
+        <form class="c-searchbar">
+          <button class="c-searchbar__button" type="submit">
+            <i class="ri-search-line c-searchbar__icon"></i>
+          </button>
+          <input class="c-searchbar__input" type="text" placeholder="Suchen">
+        </form>
+      </search>
+    </div>
+  </header>
+  <img class="hero-image" src="/src/assets/images/animals.jpg" alt="Hund und Katze"></img>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

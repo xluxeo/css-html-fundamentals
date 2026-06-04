@@ -1,0 +1,22 @@
+@use "../01-tokens/index" as TOKENS;
+
+$header-color: TOKENS.$GLOBAL-COLOR-BASE !default;
+$header-spacing: TOKENS.$GLOBAL-SPACING-DEFAULT !default;
+
+$header-max-inline-size: TOKENS.$GLOBAL-MAX-INLINE-SIZE;
+$header-inline-size: 100% !default;
+
+.c-header {
+	position: relative;
+	inline-size: $header-inline-size;
+	background-color: $header-color;
+}
+
+.c-header__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-inline: auto;
+	max-inline-size: $header-max-inline-size;
+	padding-block: $header-spacing;
+}

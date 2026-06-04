@@ -1,0 +1,29 @@
+@use "../01-tokens" as TOKENS;
+
+$logo-font-size: TOKENS.$GLOBAL-FONT-SIZE-L !default;
+$logo-font-family: TOKENS.$GLOBAL-FONT-FAMILY !default;
+$logo-text-color: TOKENS.$GLOBAL-COLOR-DEFAULT !default;
+
+$logo-gap: 10px !default;
+$logo-image-size: 80px !default;
+$logo-image-block: 80px !default;
+
+
+.c-logo {
+	display: flex;
+	align-items: center;
+	gap: $logo-gap;
+}
+
+.c-logo__image {
+	inline-size: $logo-image-size;
+	block-size: $logo-image-block;
+}
+
+.c-logo__name {
+	margin: 0;
+	font-size: $logo-font-size;
+	font-family: $logo-font-family;
+	text-decoration: none;
+	color: $logo-text-color;
+}

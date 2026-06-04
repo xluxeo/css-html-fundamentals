@@ -1,0 +1,19 @@
+@use "../01-tokens" as TOKENS;
+
+$page-image-block: 500px !default;
+$page-image-size: 100% !default;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: TOKENS.$GLOBAL-FONT-FAMILY-DEFAULT;
+}
+
+.hero-image {
+	inline-size: $page-image-size;
+	block-size: $page-image-block;
+	object-fit: cover;
+}

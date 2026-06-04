@@ -1,0 +1,96 @@
+@use "../01-tokens" as TOKENS;
+
+$nav-color-base: TOKENS.$GLOBAL-COLOR-BASE !default;
+$nav-color-default: TOKENS.$GLOBAL-COLOR-DEFAULT !default;
+$nav-color-primary: TOKENS.$GLOBAL-COLOR-SECONDARY !default;
+$nav-color-secondary: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+
+$nav-spacing-xs: TOKENS.$GLOBAL-SPACING-XS !default; //9px
+$nav-spacing-s: TOKENS.$GLOBAL-SPACING-S !default; //12px
+$nav-spacing-m: TOKENS.$GLOBAL-SPACING-M !default; //20px
+$nav-spacing-xl: TOKENS.$GLOBAL-SPACING-XL !default; //100px
+$nav-spacing-xxl: TOKENS.$GLOBAL-SPACING-XXL !default; //200px
+
+$nav-font-size-s: TOKENS.$GLOBAL-FONT-SIZE-S !default; //18px
+$nav-font-size-m: TOKENS.$GLOBAL-FONT-SIZE-M !default; //20px
+$nav-font-weight: TOKENS.$GLOBAL-FONT-WEIGHT !default; //400
+
+$nav-gap: 20px !default;
+$nav-border-radius: 10px !default;
+
+
+.c-nav__list {
+	display: flex;
+	gap: $nav-gap;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.c-nav__link {
+	opacity: 0.8;
+	border-radius: $nav-border-radius;
+	padding-block: $nav-spacing-xl;
+	padding-inline: $nav-spacing-m;
+	font-size: $nav-font-size-s;
+	font-weight: $nav-font-weight;
+	text-decoration: none;
+	color: $nav-color-default;
+	transition: all 0.3s ease;
+
+	&:hover {
+		background-color: $nav-color-primary;
+	}
+}
+
+.c-nav__item:hover .c-nav__dropdown {
+	display: block;
+
+}
+
+.c-nav__dropdown {
+	position: absolute;
+	inset-block-start: 100%;
+	inset-inline-start: 0;
+	display: none;
+	inline-size: 100vw;
+	padding: $nav-spacing-m;
+	background-color: $nav-color-base;
+}
+
+.c-nav__dropdown-inner {
+	display: flex;
+	justify-content: space-evenly;
+	gap: $nav-gap;
+	margin-inline: auto;
+	max-inline-size: 1400px;
+	padding-inline: $nav-spacing-xl;
+	background-color: $nav-color-base;
+}
+
+.c-nav__dropdown-column {
+	min-inline-size: $nav-spacing-xxl;
+}
+
+.c-nav__dropdown-headline {
+	font-size: $nav-font-size-m;
+	font-weight: $nav-font-weight;
+	color: $nav-color-secondary;
+}
+
+.c-nav__dropdown-list {
+	padding-inline: 0;
+	list-style: none;
+}
+
+.c-nav__dropdown-link {
+	display: block;
+	margin-block: $nav-spacing-xs;
+	padding-block: $nav-spacing-xs;
+	text-decoration: none;
+	color: $nav-color-secondary;
+
+	&:hover {
+		color: $nav-color-primary;
+	}
+}

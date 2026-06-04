@@ -1,0 +1,30 @@
+@use "../01-tokens" as TOKENS;
+
+$searchbar-color: TOKENS.$GLOBAL-COLOR-TERTIARY !default;
+
+$searchbar-spacing: TOKENS.$GLOBAL-SPACING-S !default;
+
+$searchbar-font-size-default: TOKENS.$GLOBAL-FONT-SIZE-DEFAULT !default; //14px
+$searchbar-font-size-s: TOKENS.$GLOBAL-FONT-SIZE-S !default; //18px
+
+
+.c-searchbar {
+	background-color: $searchbar-color;
+}
+
+.c-searchbar__button {
+	border: none;
+	padding: $searchbar-spacing;
+	background-color: $searchbar-color;
+}
+
+.c-searchbar__input {
+	border: none;
+	padding-block: $searchbar-spacing;
+	background-color: $searchbar-color;
+	font-size: $searchbar-font-size-default;
+}
+
+.c-searchbar__icon {
+	font-size: $searchbar-font-size-s;
+}
