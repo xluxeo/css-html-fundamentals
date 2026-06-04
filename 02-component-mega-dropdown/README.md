@@ -6,7 +6,7 @@ Eine kleine Vite-basierte HTML/CSS/JS Demo mit einem responsiven Mega-Dropdown-M
 
 ![](image.png)
 
-> **Live Demo:** ()
+> **Live Demo:** (https://css-html-fundamentals-mega-dropdown.vercel.app/)
 
 ## Features
 
