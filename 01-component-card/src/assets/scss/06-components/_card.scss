@@ -1,0 +1,66 @@
+@use "../01-tokens" as TOKENS;
+
+$card-spacing-s: TOKENS.$GLOBAL-SPACING-S !default;
+$card-spacing: TOKENS.$GLOBAL-SPACING-DEFAULT !default;
+$card-spacing-xl: TOKENS.$GLOBAL-SPACING-XL !default;
+
+$card-border-radius: 20px !default;
+
+$card-background-color: TOKENS.$GLOBAL-COLOR-TERTIARY !default;
+$card-border-color: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+
+$card-image-height: TOKENS.$GLOBAL-IMAGE-HEIGHT !default;
+
+$card-font-size: TOKENS.$GLOBAL-FONT-SIZE-DEFAULT !default;
+
+.card {
+	display: flex;
+	flex-direction: column;
+	background-color: $card-background-color;
+	max-height: 100%;
+	width: 100%;
+	border-radius: $card-border-radius;
+	padding: $card-spacing;
+}
+
+.card__image {
+	width: 100%;
+	border-radius: $card-border-radius;
+	height: $card-image-height;
+	object-fit: cover;
+}
+
+.card__description-text {
+	margin-bottom: $card-spacing-xl;
+}
+
+.card__details {
+	border-bottom: 1px solid $card-border-color;
+	margin-bottom: $card-spacing;
+}
+
+.card__detail {
+	margin-bottom: $card-spacing;
+}
+
+.card__detail-label {
+	font-weight: 600;
+}
+
+.card__description-text p {
+	margin-top: 0;
+}
+
+.card__tag {
+	display: flex;
+	gap: $card-spacing-s;
+	border: 2px solid $card-border-color ;
+	border-radius: $card-border-radius;
+	width: fit-content;
+	padding: $card-spacing-s;
+	margin-top: auto;
+}
+
+.card__icon {
+	font-size: $card-font-size;
+}

@@ -1,0 +1,12 @@
+@use "../01-tokens" as TOKENS;
+
+h2 {
+	color: TOKENS.$GLOBAL-COLOR-DEFAULT;
+	margin-bottom: 0;
+}
+
+h3 {
+	font-size: TOKENS.$GLOBAL-FONT-SIZE-S;
+	color: TOKENS.$GLOBAL-COLOR-QUATERNARY;
+	margin-top: 2px;
+}

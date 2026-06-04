@@ -1,0 +1,7 @@
+@use "sass:math";
+
+$GLOBAL-SPACING-DEFAULT: 20px !default;
+
+$GLOBAL-SPACING-S: math.div($GLOBAL-SPACING-DEFAULT, 2) !default; // 10px
+$GLOBAL-SPACING-L: $GLOBAL-SPACING-DEFAULT * 2 !default; // 40px
+$GLOBAL-SPACING-XL: $GLOBAL-SPACING-DEFAULT * 3 !default; // 60px

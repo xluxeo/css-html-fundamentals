@@ -1,0 +1,12 @@
+@use "../01-tokens" as TOKENS;
+
+$grid-gap: TOKENS.$GLOBAL-SPACING-DEFAULT !default;
+
+.grid {
+	display: grid;
+	gap: $grid-gap;
+}
+
+.grid--col-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
