@@ -1,0 +1,16 @@
+@use "../01-tokens" as TOKENS;
+
+$headline-spacing-xs: TOKENS.$GLOBAL-SPACING-XS !default; //6px
+$headline-spacing-s: TOKENS.$GLOBAL-SPACING-S !default; //9px
+$headline-font-family: TOKENS.$GLOBAL-FONT-FAMILY !default;
+
+h2 {
+	font-family: $headline-font-family;
+	margin: 0;
+	padding-block: $headline-spacing-xs;
+}
+
+h3 {
+	margin-block: 0;
+	padding-block: $headline-spacing-s;
+}

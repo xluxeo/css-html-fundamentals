@@ -1,0 +1,18 @@
+/* ==========================================================================
+   SCSS MAIN
+   ========================================================================== */
+
+// TOKENS BREAKPOINT
+@use "01-tokens/breakpoints" as *;
+
+// TOOLS MQ BREAKPOINT
+@use "sass-mq/mq" as * with ($breakpoints: $breakpoints);
+
+// ELEMENTS
+@use "04-elements" as ELEMENTS;
+
+// OBJECTS
+@use "05-objects" as OBJECTS;
+
+// COMPONENTS
+@use "06-components" as COMPONENTS;

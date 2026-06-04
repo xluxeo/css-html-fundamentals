@@ -1,0 +1,54 @@
+@use "../01-tokens" as TOKENS;
+
+$buttons-color-base: TOKENS.$GLOBAL-COLOR-BASE !default;
+$buttons-color-default: TOKENS.$GLOBAL-COLOR-DEFAULT !default;
+$buttons-color-primary: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+$buttons-color-secondary: TOKENS.$GLOBAL-COLOR-SECONDARY !default;
+
+$buttons-spacing-default: TOKENS.$GLOBAL-SPACING-DEFAULT !default; //18px
+$buttons-spacing-s: TOKENS.$GLOBAL-SPACING-S !default; //9px
+
+$buttons-font-size: TOKENS.$GLOBAL-FONT-SIZE-S !default; //18px
+$buttons-font-weight: TOKENS.$GLOBAL-FONT-WEIGHT !default; //600
+
+
+$buttons-border-radius: 5px !default;
+$buttons-grid-gap: 10px !default;
+
+.c-buttons {
+	display: flex;
+	flex-direction: column;
+	gap: $buttons-grid-gap;
+}
+
+.c-button {
+	display: flex;
+	align-items: center;
+	gap: $buttons-grid-gap;
+	border: none;
+	border-radius: $buttons-border-radius;
+	inline-size: fit-content;
+	padding-block: $buttons-spacing-s;
+	padding-inline: $buttons-spacing-default;
+	font-weight: $buttons-font-weight;
+}
+
+.c-button--save {
+	background-color: $buttons-color-secondary;
+	color: $buttons-color-base;
+}
+
+.c-button--follow {
+	background-color:$buttons-color-primary;
+}
+
+.c-button__icon {
+	font-size: $buttons-font-size;
+}
+
+.c-button--primary {
+	border: 1px solid $buttons-color-secondary;
+	background-color: $buttons-color-base;
+	color: $buttons-color-secondary;
+}
+

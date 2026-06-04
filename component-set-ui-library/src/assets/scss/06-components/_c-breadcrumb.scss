@@ -1,0 +1,42 @@
+@use "../01-tokens" as TOKENS;
+
+
+$breadcrumb-color-default: TOKENS.$GLOBAL-COLOR-DEFAULT !default;
+$breadcrumb-color-primary: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+$breadcrumb-color-secondary: TOKENS.$GLOBAL-COLOR-SECONDARY !default;
+
+$breadcrumb-spacing-s: TOKENS.$GLOBAL-SPACING-S !default;
+$breadcrumb-spacing: TOKENS.$GLOBAL-SPACING-DEFAULT !default; //18px
+
+$breadcrumb-font-size: TOKENS.$GLOBAL-FONT-SIZE-DEFAULT !default;
+$breadcrumb-font-weight: TOKENS.$GLOBAL-FONT-WEIGHT !default;
+
+
+.c-breadcrumb {
+	font-size: $breadcrumb-font-size;
+}
+
+.c-breadcrumb__list {
+	display: flex;
+	align-items: baseline;
+	padding: 0;
+	list-style: none;
+}
+
+.c-breadcrumb__link {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	color: $breadcrumb-color-secondary;
+}
+
+.c-breadcrumb__icon {
+	padding: $breadcrumb-spacing-s;
+	font-size: $breadcrumb-font-size;
+	color: $breadcrumb-color-primary;
+}
+
+.c-breadcrumb__link--secondary-color {
+	font-weight: $breadcrumb-font-weight;
+	color: $breadcrumb-color-default;
+}

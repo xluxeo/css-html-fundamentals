@@ -1,0 +1,101 @@
+@use "../01-tokens" as TOKENS;
+
+$ui-card-color-base: TOKENS.$GLOBAL-COLOR-BASE !default;
+$ui-card-color-default: TOKENS.$GLOBAL-COLOR-DEFAULT !default;
+$ui-card-color-primary: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+
+$ui-card-spacing-default: TOKENS.$GLOBAL-SPACING-DEFAULT !default; //18px
+$ui-card-spacing-s: TOKENS.$GLOBAL-SPACING-S !default; //9px
+
+$ui-card-font-size: TOKENS.$GLOBAL-FONT-SIZE-DEFAULT !default; //20px
+$ui-card-font-size-s: TOKENS.$GLOBAL-FONT-SIZE-S !default; //18px
+
+$ui-card-border-radius-default: 10px !default;
+$ui-card-border-radius-l: 50px !default;
+$ui-card-grid-gap: 10px !default;
+$ui-card-image-height-default: 300px!default;
+$ui-card-image-width-default: 100% !default;
+$ui-card-image-height-s: 50px !default;
+$ui-card-image-width-s: 50px !default;
+
+
+.c-ui-card {
+	border: 1px solid $ui-card-color-primary;
+	border-radius: $ui-card-border-radius-default;
+	inline-size: 100%;
+}
+
+.c-ui-card__header {
+	display: flex;
+	align-items: center;
+	gap: $ui-card-grid-gap;
+	padding: $ui-card-spacing-default;
+}
+
+.c-ui-card__avatar {
+	border-radius: $ui-card-border-radius-l;
+	inline-size: $ui-card-image-width-s;
+	block-size: $ui-card-image-height-s;
+	object-fit: cover;
+}
+
+.c-ui-card__meta {
+	display: flex;
+	justify-content: space-between;
+	inline-size: 100%;
+}
+
+.c-ui-card__date {
+	color: $ui-card-color-primary;
+}
+
+.c-ui-card__image {
+	inline-size: $ui-card-image-width-default;
+	block-size: $ui-card-image-height-default;
+	object-fit: cover;
+}
+
+.c-ui-card__content {
+	display: flex;
+	justify-content: space-between;
+	padding: $ui-card-spacing-default;
+	border-block-end: 1px solid $ui-card-color-primary;
+}
+
+.c-ui-card__likes {
+	display: flex;
+	align-items: center;
+	gap: $ui-card-grid-gap;
+}
+
+.c-ui-card__comments {
+	display: flex;
+	align-items: center;
+	gap: $ui-card-grid-gap;
+}
+
+.c-ui-card__form {
+	display: flex;
+	align-items: center;
+	gap: $ui-card-grid-gap;
+	padding: $ui-card-spacing-default;
+}
+
+.c-ui-card__button {
+	border: none;
+	background-color: $ui-card-color-base;
+}
+
+.c-ui-card__icon {
+	font-size: $ui-card-font-size;
+}
+
+.c-ui-card__icon--lighter {
+	color: $ui-card-color-primary;
+}
+
+.c-ui-card__input {
+	border: none;
+	font-size: $ui-card-font-size-s;
+}
+

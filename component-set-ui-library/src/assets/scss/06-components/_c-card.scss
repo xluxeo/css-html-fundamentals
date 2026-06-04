@@ -1,0 +1,86 @@
+@use "../01-tokens" as TOKENS;
+
+$card-color-base: TOKENS.$GLOBAL-COLOR-BASE !default;
+$card-color-default: TOKENS.$GLOBAL-COLOR-DEFAULT !default;
+$card-color-primary: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+$card-color-secondary: TOKENS.$GLOBAL-COLOR-TERTIARY !default;
+$card-color-tertiary: TOKENS.$GLOBAL-COLOR-QUATERNARY !default;
+
+$card-font-size: TOKENS.$GLOBAL-FONT-SIZE-S !default; //18px
+
+$card-spacing-default: TOKENS.$GLOBAL-SPACING-DEFAULT !default; //18px
+$card-spacing-s: TOKENS.$GLOBAL-SPACING-S !default; //9px
+$card-spacing-l: TOKENS.$GLOBAL-SPACING-L !default; //36px
+
+$card-border-radius-default: 20px !default;
+$card-border-radius-s: 10px !default;
+$card-image-height-s:  50px !default;
+$card-image-width-s: 50px !default;
+
+
+.c-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid $card-color-primary;
+	border-radius: $card-border-radius-default;
+	inline-size: 50%;
+}
+
+.c-card__user {
+	display: flex;
+	justify-content: space-between;
+	inline-size: 100%;
+	padding-block: $card-spacing-s;
+	padding-inline: $card-spacing-default;
+}
+
+.c-card__subtitle {
+	color: $card-color-primary;
+}
+
+.c-card__avatar {
+	border-radius: $card-border-radius-s;
+	max-inline-size: $card-image-width-s;
+	block-size: $card-image-height-s;
+	object-fit: cover;
+}
+
+.c-card__content {
+	inline-size: 100%;
+}
+
+.c-card__text {
+	margin: 0;
+	border-block-end: 1px solid $card-color-primary;
+	padding: $card-spacing-default;
+}
+
+.c-card__buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	inline-size: 100%;
+	padding: $card-spacing-default;
+}
+
+.c-card__button--approve {
+	border: 1px solid $card-color-secondary;
+	border-radius: 10px 0 0 10px;
+	padding-block: $card-spacing-s;
+	padding-inline: $card-spacing-l;
+	background-color: $card-color-base;
+	font-size: $card-font-size;
+	color: $card-color-secondary;
+}
+
+.c-card__button--decline {
+	border: 1px solid $card-color-tertiary;
+	border-radius: 0 10px 10px 0;
+	padding-block: $card-spacing-s;
+	padding-inline: $card-spacing-l;
+	background-color: $card-color-base;
+	font-size: $card-font-size;
+	color: $card-color-tertiary;
+}

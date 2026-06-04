@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <title>Component-Set: UI Library</title>
+</head>
+<body>
+  <div class="o-grid">
+    <div class="c-media-block">
+      <img class="c-media-block__image" src="/src/assets/images/camping.jpg" alt="Campingplatz">
+      <div class="c-media-block__body">
+        <h2 class="c-media-block__headline">Arrowhead Valley Camp</h2>
+        <div class="c-media-block__content">
+          <div class="c-media-block__items">
+            <div class="c-media-block__price">$1200</div>
+            <div class="c-media-block__date">1 Month</div>
+          </div>
+          <div class="c-media-block__description">
+            <p class="c-media-block__text">
+              Willkommen auf unserem Campingplatz! <br>
+              Genießen Sie erholsame Tage inmitten der Natur. <br>
+              Ob mit Zelt, Wohnwagen oder Camper
+              – unsere Stellplätze sind modern ausgestattet und bieten viel Platz zum Entspannen. <br>
+              In der Umgebung warten Wanderwege, Badeseen und regionale Highlights auf Sie. <br>
+              Abends lädt das Lagerfeuer zum gemütlichen Ausklang ein.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c-breadcrumb">
+      <nav class="c-breadcrumb__nav">
+        <ul class="c-breadcrumb__list">
+          <li class="c-breadcrumb__item">
+            <a class="c-breadcrumb__link" href="#">
+              Home <i class="ri-arrow-right-s-line c-breadcrumb__icon"></i>
+            </a>
+          </li>
+          <li class="c-breadcrumb__item">
+            <a class="c-breadcrumb__link" href="#">
+              Registration <i class="ri-arrow-right-s-line c-breadcrumb__icon"></i>
+            </a>
+          </li>
+          <li class="c-breadcrumb__item">
+            <p class="c-breadcrumb__link c-breadcrumb__link--secondary-color">Personal Information</p>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="c-card">
+      <div class="c-card__user">
+        <div class="c-card__information">
+          <h3 class="c-card__username">Elliot FU</h3>
+          <span class="c-card__subtitle">Friends of Veronika</span>
+        </div>
+        <img class="c-card__avatar" src="/src/assets/images/dog.jpg" alt="Hund">
+      </div>
+      <div class="c-card__content">
+        <p class="c-card__text">Elliot requested permission to view your contact details</p>
+        <div class="c-card__buttons">
+          <button class="c-card__button c-card__button--approve">Approve</button>
+          <button class="c-card__button c-card__button--decline">Decline</button>
+        </div>
+      </div>
+    </div>
+    <div class="c-ui-card">
+      <div class="c-ui-card__header">
+        <img class="c-ui-card__avatar" src="/src/assets/images/dog.jpg" alt="Profilbild Hund">
+        <div class="c-ui-card__meta">
+          <span class="c-ui-card__username">Elliot</span>
+          <span class="c-ui-card__date">14h</span>
+        </div>
+      </div>
+      <img class="c-ui-card__image" src="/src/assets/images/lake.jpg" alt="Bild von einem See">
+      <div class="c-ui-card__content">
+        <span class="c-ui-card__comments">
+          <i class="ri-chat-3-fill c-ui-card__icon"></i>
+          3 comments
+        </span>
+        <span class="c-ui-card__likes">
+          <i class="ri-heart-line c-ui-card__icon c-ui-card__icon--lighter"></i>
+          17 likes
+        </span>
+      </div>
+      <form class="c-ui-card__form">
+        <button class="c-ui-card__button">
+          <i class="ri-heart-line c-ui-card__icon c-ui-card__icon--lighter"></i>
+        </button>
+        <input class="c-ui-card__input" type="text" placeholder="Add Comment...">
+      </form>
+    </div>
+    <div class="c-buttons">
+      <button class="c-button c-button--save">Save</button>
+      <button class="c-button c-button--follow">
+        <i class="ri-user-fill c-button__icon"></i>
+        Follow
+      </button>
+      <button class="c-button c-button--primary">Primary</button>
+      <button class="c-button" disabled>
+        <i class="ri-user-fill c-button__icon"></i>
+        Followed
+      </button>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

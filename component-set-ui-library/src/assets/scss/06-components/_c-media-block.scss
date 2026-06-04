@@ -1,0 +1,46 @@
+@use "../01-tokens" as TOKENS;
+
+$media-block-color-default: TOKENS.$GLOBAL-COLOR-DEFAULT !default;
+$media-block-color-primary: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+
+$media-block-spacing-s: TOKENS.$GLOBAL-SPACING-S !default; //9px
+$media-block-spacing: TOKENS.$GLOBAL-SPACING-DEFAULT !default; //18px
+$media-block-spacing-l: TOKENS.$GLOBAL-SPACING-L !default; //36px
+$media-block-spacing-xl: TOKENS.$GLOBAL-SPACING-XL !default; //54px
+
+$media-block-border-radius: 25px !default; //25px
+$media-block-image-height-default: 300px !default;
+$media-block-image-width-default: 100% !default;
+
+.c-media-block {
+	display: flex;
+	border: 2px solid $media-block-color-primary;
+	border-radius: $media-block-border-radius;
+	inline-size: 100%;
+}
+
+.c-media-block__image {
+	border-radius: $media-block-border-radius;
+	max-inline-size: $media-block-image-width-default;
+	block-size: $media-block-image-height-default;
+	padding: $media-block-spacing;
+}
+
+.c-media-block__body {
+	margin: $media-block-spacing;
+}
+
+.c-media-block__content {
+	display: flex;
+	flex-direction: column;
+}
+
+.c-media-block__items {
+	display: flex;
+	gap: $media-block-spacing-xl;
+	color: $media-block-color-primary;
+}
+
+.c-media-block__text {
+	margin-block-end: auto;
+}

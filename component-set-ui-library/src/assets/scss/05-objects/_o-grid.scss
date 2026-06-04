@@ -1,0 +1,8 @@
+.o-grid {
+	display: grid;
+	grid-template-columns: 50% 30%;
+	grid-template-rows: 25% 20% 10%;
+	justify-content: center;
+	align-items: start;
+	gap: 80px;
+}
