@@ -1,0 +1,11 @@
+@use "../01-tokens" as TOKENS;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: TOKENS.$GLOBAL-COLOR-PRIMARY;
+	font-family: TOKENS.$GLOBAL-FONT-FAMILY;
+	font-size: TOKENS.$GLOBAL-FONT-SIZE-DEFAULT;
+}

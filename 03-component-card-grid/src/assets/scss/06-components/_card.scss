@@ -1,0 +1,41 @@
+@use "../01-tokens" as TOKENS;
+
+$card-color-base: TOKENS.$GLOBAL-COLOR-BASE !default;
+$card-color-primary: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+$card-spacing: TOKENS.$GLOBAL-SPACING-DEFAULT !default;
+$card-font-size-s: TOKENS.$GLOBAL-FONT-SIZE-S !default;
+$card-font-size-l: TOKENS.$GLOBAL-FONT-SIZE-L!default;
+
+.c-card {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid $card-color-primary;
+	border-radius: $card-spacing;
+	block-size: 100vh;
+	background-color: $card-color-base;
+}
+
+.c-card__image {
+	inline-size: 100%;
+	block-size: 50%;
+	object-fit: cover;
+	border-radius: $card-spacing $card-spacing 0 0;
+}
+
+.c-card__title {
+	font-size: $card-font-size-l;
+}
+
+.c-card__author {
+	text-transform: uppercase;
+	font-size: $card-font-size-s;
+	color: $card-color-primary;
+}
+
+.c-card__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	block-size: 100%;
+	padding: $card-spacing;
+}

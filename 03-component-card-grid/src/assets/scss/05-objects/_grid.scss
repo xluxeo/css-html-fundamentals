@@ -1,0 +1,24 @@
+@use "../01-tokens" as TOKENS;
+@use "sass-mq/mq" as *;
+
+$grid-gap: 12px !default;
+
+.o-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: $grid-gap;
+
+	@include mq($from: tablet) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@include mq($from: desktop) {
+		grid-template-columns: 2fr 1fr 1fr;
+	}
+}
+
+.o-grid__item:first-child {
+	@include mq($from: tablet, $until: desktop) {
+		grid-column: span 2;
+	}
+}
