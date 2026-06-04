@@ -12,7 +12,7 @@ Diese Komponente zeigt eine `Card`-Darstellung für Pflanzen mit Bild, Titel, wi
 
 ## Live Demo
 
-Live Demo: [https://example.com/your-live-demo](https://example.com/your-live-demo)
+Live Demo: (https://css-html-fundamentals-card.vercel.app/)
 
 
 ## Installation
