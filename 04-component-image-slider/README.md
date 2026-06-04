@@ -8,7 +8,7 @@ Ein einfaches Image-Slider-Projekt mit Vite, SCSS und sauberer Ordnerstruktur.
 
 ## Live Demo
 
-- Live Demo: ()
+- Live Demo: (https://css-html-fundamentals-image-slider.vercel.app/)
 
 ## Installation
 
