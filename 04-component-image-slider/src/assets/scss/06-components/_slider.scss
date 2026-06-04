@@ -1,0 +1,67 @@
+@use "../01-tokens" as TOKENS;
+@use "../02-tools" as TOOLS;
+
+$slider-spacing: TOKENS.$GLOBAL-SPACING-DEFAULT !default;
+$slider-color: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+$slider-z-index: TOKENS.$GLOBAL-Z-INDEX !default;
+
+$slider-border-radius: 25px !default;
+
+.c-slider {
+	padding: $slider-spacing;
+}
+
+.c-slider__wrapper {
+	@include TOOLS.wrapper();
+
+	position: relative;
+}
+
+.c-slider__slides {
+	display: flex;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.c-slider__slide {
+	flex: 0 0 100%;
+	scroll-snap-align: start;
+	aspect-ratio: 16/9;
+	overflow: hidden;
+	border-radius: $slider-border-radius;
+}
+
+.c-slider__image {
+	inline-size: 100%;
+	block-size: 100%;
+	object-fit: cover;
+}
+
+.c-slider__nav {
+	position: absolute;
+	z-index: $slider-z-index;
+	display: flex;
+	column-gap: $slider-spacing;
+	inset-block-end: $slider-spacing;
+	inset-inline-start: 50%;
+	transform: translateX(-50%);
+	background: none;
+}
+
+.c-slider__button {
+	opacity: 0.5;
+	transition: opacity ease 250ms;
+	inline-size: $slider-spacing;
+	block-size: $slider-spacing;
+	border-radius: 50%;
+	background-color: $slider-color;
+
+	&:hover {
+		opacity: 1;
+	}
+}

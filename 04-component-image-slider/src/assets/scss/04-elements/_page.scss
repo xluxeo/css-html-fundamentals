@@ -1,0 +1,10 @@
+@use "../01-tokens" as TOKENS;
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: TOKENS.$GLOBAL-COLOR-DEFAULT;
+}
