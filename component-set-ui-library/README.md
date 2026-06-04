@@ -17,9 +17,7 @@ Eine kleine UI-Bibliothek basierend auf Vite und Sass.
 
 Eine Live-Demo ist verfügbar unter:
 
-`https://deine-domain.example.com`
-
-> Ersetze die obige URL durch den Link zu deiner eigenen Demo, sobald sie bereit ist.
+(https://css-html-fundamentals-ui-library.vercel.app/)
 
 ## 🧪 Lokale Entwicklung
 
