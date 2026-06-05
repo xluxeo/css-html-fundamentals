@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Optimization</title>
+</head>
+<body>
+  <h2>SRCSET für Breakpoints & Quellen</h2>
+  <picture>
+    <source type="image/webp" media="(min-width: 900px)" srcset="/src/assets/images/bearded-dragon.webp">
+    <source type="image/webp" media="(min-width: 600px)" srcset="/src/assets/images/lizard.webp">
+    <source type="image/webp" media="(min-width: 0px)" srcset="/src/assets/images/lizard-2.webp">
+    <img class="c-image" data-image-focus="top-right" src="/src/assets/images/bearded-dragon.jpg" alt="bearded-dragon"
+      loading="lazy">
+  </picture>
+
+  <h2>Loading = Lazy</h2>
+  <picture>
+    <source type="image/webp" srcset="/src/assets/images/bearded-dragon.webp">
+    <source type="image/jpg" srcset="/src/assets/images/bearded-dragon.jpg">
+    <img class="c-image" src="/src/assets/images/bearded-dragon.jpg" alt="bearded-dragon" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="/src/assets/images/lizard.webp">
+    <source type="image/jpg" srcset="/src/assets/images/lizard.jpg">
+    <img class="c-image" src="/src/assets/images/lizard.jpg" alt="lizard" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="/src/assets/images/lizard-2.webp">
+    <source type="image/jpg" srcset="/src/assets/images/lizard-2.jpg">
+    <img class="c-image" src="/src/assets/images/lizard-2.jpg" alt="another lizard" loading="lazy">
+  </picture>
+
+  <h2>Modifier für Fokuspunkte</h2>
+  <div class="c-image__focus" data-image-focus="top" style="background-image: url(/src/assets/images/bearded-dragon.jpg)"></div>
+  <div class="c-image__focus" data-image-focus="center" style="background-image: url(/src/assets/images/lizard.jpg)"></div>
+  <div class="c-image__focus" data-image-focus="bottom" style="background-image: url(/src/assets/images/lizard-2.jpg)"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

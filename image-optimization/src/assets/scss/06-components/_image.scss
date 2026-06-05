@@ -1,0 +1,26 @@
+$image-inline-size: 400px !default;
+$image-block-size: 400px !default;
+
+.c-image {
+	inline-size: 100%;
+	block-size: auto;
+}
+
+.c-image__focus {
+	inline-size: $image-inline-size;
+	block-size: $image-block-size;
+	background-size: cover;
+	background-position: right bottom;
+
+	&[data-image-focus="top"]{
+		background-position: top;
+	}
+
+	&[data-image-focus="center"]{
+		background-position: center;
+	}
+
+	&[data-image-focus="bottom"]{
+		background-position: bottom;
+	}
+}
