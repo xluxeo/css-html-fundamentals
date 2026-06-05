@@ -1,0 +1,34 @@
+@use 'sass:map';
+
+$breakpoints: (
+	'desktop': 1025px,
+	'tablet': 768px,
+	'mobile': 480px
+) !default;
+
+/*Breakpoints
+Schreibe ein Mixin in SCSS welches mindestens drei Breakpoint Punkte berücksichtigt:
+Desktop > 1025px
+Tablet < 1024px
+Mobil < 720px
+nutze map & mixin, @each, @if*/
+@mixin breakpoint($size) {
+	$breakpoint: map.has-key($breakpoints, $size);
+	@if $breakpoint {
+		@each $key, $value in $breakpoints {
+			@if $key == $size {
+				@if $size == 'desktop' {
+					@media (min-width: $value) {
+						@content;
+					}
+				} @else {
+					@media (max-width: $value) {
+						@content;
+					}
+				}
+			}
+		}
+	} @else {
+		@error 'Unbekannter Breakpoint: #{$size}';
+	}
+}

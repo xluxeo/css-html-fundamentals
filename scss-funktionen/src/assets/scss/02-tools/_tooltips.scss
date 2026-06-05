@@ -1,0 +1,76 @@
+$tooltip-spacing: 8px 12px !default;
+$tooltip-border-radius: 4px !default;
+$tooltip-background-color: #fff !default;
+$tooltip-color: #333 !default;
+
+/* Mixin für einen Tooltip
+ein Tooltip kann oben, rechts, unten, links positioniert werden. */
+@mixin tooltip($position: 'top') {
+	position: absolute;
+	top: auto;
+	right: auto;
+	bottom: auto;
+	left: auto;
+	z-index: 1;
+	border: 1px solid $tooltip-color;
+	border-radius: $tooltip-border-radius;
+	padding: $tooltip-spacing;
+	background-color: $tooltip-background-color;
+	white-space: nowrap;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: auto;
+		bottom: auto;
+		left: auto;
+		right: auto;
+		border: 6px solid transparent;
+	}
+
+	@if $position == 'top' {
+		bottom: 100%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-8px);
+
+		&::after {
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			border-top-color: $tooltip-color;
+		}
+	} @else if $position == 'bottom' {
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%) translateY(8px);
+
+		&::after {
+			bottom: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			border-bottom-color: $tooltip-color;
+		}
+	} @else if $position == 'left' {
+		right: 100%;
+		top: 50%;
+		transform: translateY(-50%) translateX(-8px);
+
+		&::after {
+			left: 100%;
+			top: 50%;
+			transform: translateY(-50%);
+			border-left-color: $tooltip-color;
+		}
+	} @else if $position == 'right' {
+		left: 100%;
+		top: 50%;
+		transform: translateY(-50%) translateX(8px);
+
+		&::after {
+			right: 100%;
+			top: 50%;
+			transform: translateY(-50%);
+			border-right-color: $tooltip-color;
+		}
+	}
+}

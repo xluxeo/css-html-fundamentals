@@ -1,0 +1,29 @@
+@use '../02-tools' as *;
+
+$container-gap: 8rem !default;
+$container-spacing: 4rem !default;
+
+.c-container {
+	inline-size: 100%;
+	text-align: center;
+}
+
+.c-container__item {
+	display: flex;
+	gap: $container-gap;
+	margin: $container-spacing;
+	@include breakpoint('desktop') {
+		background-color: hotpink;
+	}
+	@include breakpoint('tablet') {
+		background-color: lightgreen;
+	}
+	@include breakpoint('mobile') {
+		flex-direction: column;
+		background-color: lightblue;
+	}
+	/* Dieser breakpoint existiert nicht */
+	/*@include breakpoint('mini-tablet') {
+		background-color: lightcoral;
+	}*/
+}

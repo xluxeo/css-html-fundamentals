@@ -1,0 +1,16 @@
+@use '../02-tools' as *;
+
+.c-button {
+	@include button();
+	z-index: z-index('base');
+}
+
+[data-button-primary] {
+	@include button(hotpink, beige, $size-large, false);
+	/* Dieses Layer existiert nicht und deshalb sollte er einen Fehler schmeißen */
+	/*z-index: z-index('button');*/
+}
+
+[data-button-secondary] {
+	@include button(grey, lightblue, 16px, true);
+}

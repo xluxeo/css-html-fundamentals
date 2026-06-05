@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Mixins und Funktionen</title>
+</head>
+<body>
+<div class="c-container">
+	<div class="c-container__item">
+		<span>Buttons:</span>
+		<button class="c-button">Button</button>
+		<button class="c-button" data-button-primary>Primary</button>
+		<button class="c-button" data-button-secondary>Secondary</button>
+	</div>
+	<div class="c-container__item">
+		<span>Tooltips:</span>
+		<div class="c-tooltip">
+			Unten
+			<span class="c-tooltip__content">Ich bin ein Tooltip!</span>
+		</div>
+		<div class="c-tooltip">
+			Oben
+			<span class="c-tooltip__content" data-tooltip-primary>Ich bin ein Tooltip!</span>
+		</div>
+		<div class="c-tooltip">
+			Rechts
+			<span class="c-tooltip__content" data-tooltip-secondary>Ich bin ein Tooltip!</span>
+		</div>
+		<div class="c-tooltip">
+			Links
+			<span class="c-tooltip__content" data-tooltip-tertiary>Ich bin ein Tooltip!</span>
+		</div>
+	</div>
+	<div class="c-container__item">
+		<span>Button mit utilities</span>
+		<button class="c-button u-mt-l">margin-top-large</button>
+		<button class="c-button u-mb-m">margin-bottom-medium</button>
+		<button class="c-button u-mr-s">margin-right-small</button>
+		<button class="c-button u-ml-l">margin-left-large</button>
+	</div>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

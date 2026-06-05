@@ -1,0 +1,30 @@
+/* Utility für Spacings:
+Schreibe ein Loop für Spacings. Klassen sollten wie folgt aussehen: u-mt-l (margin-top: large value).
+die Variablen deiner Spacings sollte in einem Objekt geschrieben sein
+loope über dieses Objekt und lass dir die Keys und Values zurück geben.
+deine Utilitys sollten durch die Loop Methode automatisch erzeugt werden */
+
+$spacings: (
+	"s" : 0.5rem,
+	"m" : 1rem,
+	"l" : 2rem,
+) !default;
+
+@each $key, $value in $spacings {
+
+	.u-mt-#{$key} {
+		margin-top: $value !important;
+	}
+
+	.u-mb-#{$key} {
+		margin-bottom: $value !important;
+	}
+
+	.u-mr-#{$key} {
+		margin-right: $value !important;
+	}
+
+	.u-ml-#{$key} {
+		margin-left: $value !important;
+	}
+}

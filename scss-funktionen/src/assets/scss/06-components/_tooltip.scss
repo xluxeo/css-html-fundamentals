@@ -1,0 +1,31 @@
+@use '../02-tools' as *;
+
+$tooltip-spacing: 4px 8px !default;
+
+.c-tooltip {
+	position: relative;
+	display: inline-block;
+	padding: $tooltip-spacing;
+	cursor: default;
+}
+
+.c-tooltip__content {
+	@include tooltip('bottom');
+	visibility: hidden;
+
+	&[data-tooltip-primary] {
+		@include tooltip('top');
+	}
+
+	&[data-tooltip-secondary] {
+		@include tooltip('right');
+	}
+
+	&[data-tooltip-tertiary] {
+		@include tooltip('left');
+	}
+}
+
+.c-tooltip:hover .c-tooltip__content {
+	visibility: visible;
+}

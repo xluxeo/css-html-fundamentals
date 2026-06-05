@@ -1,0 +1,31 @@
+@use 'sass:map';
+@use '../01-tokens' as TOKENS;
+
+$layer-base: TOKENS.$GLOBAL-BASE-LAYER !default;
+$layer-header: TOKENS.$GLOBAL-HEADER-LAYER !default;
+$layer-footer: TOKENS.$GLOBAL-FOOTER-LAYER !default;
+$layer-modal: TOKENS.$GLOBAL-MODAL-LAYER !default;
+$layer-overlay: TOKENS.$GLOBAL-OVERLAY-LAYER !default;
+
+$z-layers: (
+	'base': $layer-base,
+	'header': $layer-header,
+	'footer': $layer-footer,
+	'modal': $layer-modal,
+	'overlay': $layer-overlay
+) !default;
+
+/*Z-Layer Funktion
+ Lass dir eine Map mit den unterschiedlichen z-index Werten in eine Funktion übergeben
+ Die Funktion gibt den Value des Z-Index zurück
+*/
+@function z-index($layer) {
+	$z-index-key: map.has-key($z-layers, $layer);
+	$z-index-value: map.get($z-layers, $layer);
+
+	@if $z-index-key {
+		@return $z-index-value;
+	} @else {
+		@error 'Unbekannter Layer: #{$layer}';
+	}
+}
