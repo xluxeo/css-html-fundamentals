@@ -1,0 +1,46 @@
+@use "../01-tokens" as TOKENS;
+
+$tooltip-color-default: TOKENS.$GLOBAL-COLOR-DEFAULT !default;
+$tooltip-color-primary: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+$tooltip-spacing-default: TOKENS.$GLOBAL-SPACING-DEFAULT !default;
+$tooltip-z-index: TOKENS.$GLOBAL-Z-INDEX !default;
+
+$tooltip-border-radius: 6px !default;
+$tooltip-border-width: 5px !default;
+$tooltip-inline-size: 120px !default;
+
+
+.c-tooltip {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.c-tooltip__content {
+	position: absolute;
+	inset-block-start: 150%;
+	inset-inline-start: -200%;
+	z-index: $tooltip-z-index;
+	visibility: hidden;
+	border-radius: $tooltip-border-radius;
+	inline-size: $tooltip-inline-size;
+	padding: $tooltip-spacing-default;
+	background-color: $tooltip-color-default;
+	text-align: center;
+	color: $tooltip-color-primary;
+}
+
+.c-tooltip__content::after {
+	content: "";
+	position: absolute;
+	inset-block-end: 100%;
+	inset-inline-end: 50%;
+	margin-inline-start: -5px;
+	border-width: $tooltip-border-width;
+	border-style: solid;
+	border-color:  transparent transparent $tooltip-color-default transparent;
+}
+
+.c-tooltip:hover .c-tooltip__content {
+	visibility: visible;
+}

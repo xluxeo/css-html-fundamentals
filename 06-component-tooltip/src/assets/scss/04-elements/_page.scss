@@ -1,0 +1,12 @@
+@use "../01-tokens" as TOKENS;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 20px auto;
+	max-inline-size: 100px;
+	font-family: TOKENS.$GLOBAL-FONT-FAMILY;
+	font-size: TOKENS.$GLOBAL-FONT-SIZE;
+}
