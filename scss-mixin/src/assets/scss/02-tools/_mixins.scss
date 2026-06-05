@@ -1,0 +1,52 @@
+@use "sass:map";
+
+$breakpoints: (
+	's': 667px,
+	'm': 1024px,
+	'l': 1280px
+) !default;
+
+/*Schreibe ein Flexbox Mixin
+gebe deinem Mixin einen Namen
+Folgende Argumente sollen dem Mixin übergeben werden:
+Flexbox-Richtung: column oder row;
+Flexbox-Center: wenn true = align-items: center; justify-content: center;
+Flexbox-Wrap: wrap oder none
+Teste dein Mixin mit @include*/
+@mixin flexbox($direction, $center: true, $wrap: nowrap) {
+	display: flex;
+	flex-direction: $direction;
+	flex-wrap: $wrap;
+	@if $center {
+		align-items: center;
+		justify-content: center;
+	} @else {
+		align-items: flex-end;
+		justify-content: flex-end;
+	}
+}
+
+/*Schreibe ein Breakpoint Mixin
+nutze sass:map
+lege dir ein Objekt namens $breakpoint an:
+'s': 667px
+'m': 1024px
+'l': 1280px
+gebe deine mixin einen Namen und übergeben als Argumnet deinem Mixin einen Breakpoint-Key
+überprüfe in einer IF Condition mit map.has-key() ob dein Breakpoint-Key in deinem Objekt vorhanden ist
+mit map.get(Objekt, Breakpoint-Key) kannst du nun auf die Values zu greifen
+nutze das um folgende Rule zu verwenden
+@media(min-width: ) {}
+mit @content als Placeholder kannst du nun deine Styles ersetzen bzw. frei lassen
+Teste dein Mixin mit @include*/
+
+@mixin breakpoints($breakpoint) {
+	@if map.has-key($breakpoints, $breakpoint) {
+		$breakpoint-value: map.get($breakpoints, $breakpoint);
+		@media (min-width: $breakpoint-value) {
+			@content;
+		}
+	} @else {
+		@error 'Breakpoint #{$breakpoint} ist nicht vorhanden';
+	}
+}

@@ -1,0 +1,26 @@
+@use '../02-tools' as *;
+
+.u-breakpoint-s {
+	@include breakpoints('s') {
+		background-color: red;
+	}
+}
+
+.u-breakpoint-m {
+	@include breakpoints('m') {
+		background-color: blue;
+	}
+}
+
+.u-breakpoint-l {
+	@include breakpoints('l') {
+		background-color: green;
+	}
+}
+
+// Existiert nicht, daher sollte eine Fehlermeldung in der Konsole ausgegeben werden;
+/*.u-breakpoint-xl {
+	@include breakpoints('xl') {
+		background-color: yellow;
+	}
+}*/

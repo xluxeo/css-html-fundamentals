@@ -1,0 +1,27 @@
+@use "../02-tools" as *;
+
+.o-flexbox {
+	@include flexbox(row, false, wrap);
+	border: 1px solid black;
+}
+
+[data-flexbox-primary] {
+	@include flexbox(column, true, nowrap);
+}
+
+[data-flexbox-secondary] {
+	@include flexbox(row, true, nowrap);
+}
+
+[data-flexbox-tertiary] {
+	@include flexbox(column, false, wrap);
+}
+
+.o-flexbox__item {
+	margin: 1rem;
+	padding: 1rem;
+	max-inline-size: 200px;
+	inline-size: 100%;
+	border: 1px solid black;
+	background-color: hotpink;
+}
