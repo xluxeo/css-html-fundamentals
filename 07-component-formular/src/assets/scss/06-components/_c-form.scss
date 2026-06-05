@@ -1,0 +1,64 @@
+@use "../01-tokens" as TOKENS;
+
+$form-background-color: TOKENS.$GLOBAL-COLOR-BASE !default;
+$form-highlight-color: TOKENS.$GLOBAL-COLOR-ACCENT !default;
+$form-color: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+$form-spacing-default: TOKENS.$GLOBAL-SPACING-DEFAULT !default;
+$form-spacing-s: TOKENS.$GLOBAL-SPACING-S !default;
+
+$form-max-inline-size: 600px !default;
+$form-inline-size: 50% !default;
+$form-border-radius: 4px !default;
+$form-input-border-radius: 8px !default;
+$form-button-padding: 10px 20px !default;
+
+.c-form {
+	margin: 50vh auto;
+	max-inline-size: $form-max-inline-size;
+	border-radius: $form-border-radius;
+	padding: $form-spacing-default;
+	background-color: $form-background-color;
+}
+
+.c-form__label {
+	display: block;
+	inline-size: 100%;
+	padding-block: $form-spacing-default;
+}
+
+.c-form__group {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.c-form__group-item {
+	display: flex;
+}
+
+.c-form__input {
+	border: none;
+	border-radius: $form-input-border-radius;
+	inline-size: 100%;
+	padding: $form-spacing-s;
+}
+
+.c-form__toggle {
+	padding: $form-spacing-default;
+}
+
+.c-form__select {
+	border: none;
+	border-radius: $form-input-border-radius;
+	padding: $form-spacing-s;
+}
+
+.c-form__button {
+	display: block;
+	margin: auto;
+	border: none;
+	border-radius: $form-border-radius;
+	padding: $form-button-padding;
+	background-color: $form-highlight-color;
+	color: $form-color;
+	cursor: pointer;
+}

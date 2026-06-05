@@ -1,0 +1,13 @@
+@use "../01-tokens" as TOKENS;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	max-inline-size: 100%;
+	font-family: TOKENS.$GLOBAL-FONT-FAMILY;
+	background-image: url(../../images/background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}

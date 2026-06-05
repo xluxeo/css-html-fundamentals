@@ -1,0 +1,15 @@
+$form-input-gap-s: 8px !default;
+$form-input-gap-m: 16px !default;
+
+[data-grid-col="col-2"]{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: $form-input-gap-s;
+}
+
+[data-grid-col="col-4"]{
+	display: grid;
+	grid-template-columns: auto repeat(3, 1fr);
+	align-items: center;
+	gap: $form-input-gap-m;
+}

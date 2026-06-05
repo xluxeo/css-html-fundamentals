@@ -1,0 +1,6 @@
+$wrapper-max-width: 1200px !default;
+
+@mixin wrapper() {
+	margin-inline: auto;
+	max-width: $wrapper-max-width;
+}

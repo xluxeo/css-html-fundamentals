@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Component: Formular</title>
+</head>
+<body>
+  <form class="c-form" method="post">
+    <h3 class="c-form__title">Test Umfrage</h3>
+    <fieldset class="c-form__fieldset">
+      <legend class="c-form__legend">Persönliche Informationen</legend>
+      <div class="c-form__group" data-grid-col="col-2">
+        <div class="c-form__group-item" data-display="block">
+          <label for="firstname" class="c-form__label">Vorname:</label>
+          <input type="text" id="firstname" class="c-form__input" required>
+        </div>
+        <div class="c-form__group-item" data-display="block">
+          <label for="lastname" class="c-form__label">Nachname:</label>
+          <input type="text" id="lastname" class="c-form__input" required>
+        </div>
+      </div>
+      <div class="c-form__group">
+        <label for="birthdate" class="c-form__label">Geburtsdatum:</label>
+        <input type="date" id="birthdate" class="c-form__input" name="birthdate">
+      </div>
+      <div class="c-form__group" data-grid-col="col-4">
+        <span class="c-form__label">Geschlecht:</span>
+        <div class="c-form__group-item">
+          <label for="male" class="c-form__group-label">Männlich</label>
+          <input type="radio" class="c-form__input" id="male" name="gender" value="male">
+        </div>
+        <div class="c-form__group-item">
+          <label for="female" class="c-form__group-label">Weiblich</label>
+          <input type="radio" class="c-form__input" id="female" name="gender" value="female">
+        </div>
+        <div class="c-form__group-item">
+          <label for="diverse" class="c-form__group-label">Divers</label>
+          <input type="radio" class="c-form__input" id="diverse" name="gender" value="diverse">
+        </div>
+      </div>
+      <div class="c-form__group">
+        <label for="phone" class="c-form__label">Telefonnummer:</label>
+        <input type="tel" class="c-form__input" id="phone" name="phone">
+      </div>
+      <div class="c-form__group">
+        <label for="password" class="c-form__label">Passwort:</label>
+        <input type="password" class="c-form__input" id="password" required>
+      </div>
+    </fieldset>
+    <details class="c-form__toggle">
+      <summary class="c-form__toggle-title">Weitere Angaben anzeigen</summary>
+      <div class="c-form__group">
+        <label for="email" class="c-form__label">Email:</label>
+        <input type="email" class="c-form__input" id="email">
+      </div>
+      <div class="c-form__group">
+        <label for="country" class="c-form__label">Land:</label>
+        <select id="country" class="c-form__select" name="country">
+          <option>Bitte wähle ein Land aus:</option>
+          <option>Deutschland</option>
+          <option>Schweden</option>
+          <option>Dänemark</option>
+          <option>Ägypten</option>
+          <option>Unknown Islands</option>
+        </select>
+      </div>
+      <div class="c-form__group">
+        <label for="city" class="c-form__label">Stadt:</label>
+        <select id="city" class="c-form__select" name="city">
+          <option>Bitte wähle eine Stadt aus:</option>
+          <option>Berlin</option>
+          <option>Hamburg</option>
+          <option>Bremen</option>
+          <option>Frankfurt</option>
+          <option>Unknown City</option>
+        </select>
+      </div>
+    </details>
+    <button class="c-form__button" type="submit">Absenden</button>
+  </form>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
