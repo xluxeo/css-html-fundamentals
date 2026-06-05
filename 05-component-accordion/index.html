@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <title>Component: Accordion</title>
+</head>
+<body>
+  <div class="c-accordion">
+    <details class="c-accordion__title" name="title">
+      <summary class="c-accordion__content">
+        <span class="c-accordion__wrapper">
+          <i class="ri-brush-fill c-accordion__icon"></i>
+          Diseño web
+        </span>
+        <i class="ri-arrow-down-s-line c-accordion__icon c-accordion__icon--closed"></i>
+        <i class="ri-arrow-up-s-line c-accordion__icon c-accordion__icon--open"></i>
+      </summary>
+      <div class="c-accordion__collapsible">
+        <ul class="c-accordion__list">
+          <li class="c-accordion__item">Photoshop</li>
+          <li class="c-accordion__item">HTML</li>
+          <li class="c-accordion__item">CSS</li>
+          <li class="c-accordion__item">Maquetación web</li>
+        </ul>
+      </div>
+    </details>
+    <details class="c-accordion__title" name="title">
+      <summary class="c-accordion__content">
+        <span class="c-accordion__wrapper">
+          <i class="ri-code-s-slash-line c-accordion__icon"></i>
+          Desarrollo front-end
+        </span>
+        <i class="ri-arrow-down-s-line c-accordion__icon c-accordion__icon--closed"></i>
+        <i class="ri-arrow-up-s-line c-accordion__icon c-accordion__icon--open"></i>
+      </summary>
+      <div class="c-accordion__collapsible"></div>
+    </details>
+    <details class="c-accordion__title" name="title">
+      <summary class="c-accordion__content">
+        <span class="c-accordion__wrapper">
+          <i class="ri-smartphone-line c-accordion__icon"></i>
+          Diseño responsive
+        </span>
+        <i class="ri-arrow-down-s-line c-accordion__icon c-accordion__icon--closed"></i>
+        <i class="ri-arrow-up-s-line c-accordion__icon c-accordion__icon--open"></i>
+      </summary>
+      <div class="c-accordion__collapsible"></div>
+    </details>
+    <details class="c-accordion__title" name="title">
+      <summary class="c-accordion__content">
+        <span class="c-accordion__wrapper">
+          <i class="ri-earth-fill c-accordion__icon"></i>
+          Posicionamiento web
+        </span>
+        <i class="ri-arrow-down-s-line c-accordion__icon c-accordion__icon--closed"></i>
+        <i class="ri-arrow-up-s-line c-accordion__icon c-accordion__icon--open"></i>
+      </summary>
+      <div class="c-accordion__collapsible"></div>
+    </details>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

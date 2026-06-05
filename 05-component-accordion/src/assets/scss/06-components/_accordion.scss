@@ -1,0 +1,66 @@
+@use "../01-tokens" as TOKENS;
+
+$accordion-color-base: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+$accordion-color-default: TOKENS.$GLOBAL-COLOR-DEFAULT !default;
+$accordion-color-primary: TOKENS.$GLOBAL-COLOR-SECONDARY !default;
+$accordion-color-secondary: TOKENS.$GLOBAL-COLOR-TERTIARY !default;
+$accordion-font-size: TOKENS.$GLOBAL-FONT-SIZE !default;
+$accordion-font-weight: TOKENS.$GLOBAL-FONT-WEIGHT !default;
+$accordion-spacing-default: TOKENS.$GLOBAL-SPACING-DEFAULT !default;
+
+$accordion-gap: 12px !default;
+
+.c-accordion {
+	overflow: hidden;
+	max-inline-size: 500px;
+	inline-size: 100%;
+	padding: $accordion-spacing-default;
+}
+
+.c-accordion__title{
+	background-color: $accordion-color-base;
+	color: $accordion-color-default;
+}
+
+.c-accordion__title[open] {
+	color: $accordion-color-secondary;
+}
+
+.c-accordion__icon--open {
+	display: none;
+}
+
+.c-accordion__title[open] .c-accordion__icon--closed {
+	display: none;
+}
+
+.c-accordion__title[open] .c-accordion__icon--open {
+	display: block;
+}
+
+.c-accordion__icon {
+	font-size: $accordion-font-size;
+}
+
+.c-accordion__content {
+	display: flex;
+	justify-content: space-between;
+	padding: $accordion-spacing-default;
+	background-color: transparent;
+	font-weight: $accordion-font-weight;
+}
+
+.c-accordion__wrapper {
+	display: flex;
+	gap: $accordion-gap;
+}
+
+.c-accordion__list {
+	display: grid;
+	gap: $accordion-gap;
+	margin: 0;
+	padding: 18px 40px;
+	list-style: none;
+	background-color: $accordion-color-primary;
+	color: $accordion-color-base;
+}
