@@ -1,0 +1,14 @@
+@use "../01-tokens" as TOKENS;
+
+$headline-font-family: TOKENS.$GLOBAL-FONT-FAMILY !default;
+$headline-font-weight-r: TOKENS.$GLOBAL-FONT-WEIGHT-REGULAR !default;
+$headline-font-weight-m: TOKENS.$GLOBAL-FONT-WEIGHT-MEDIUM !default;
+
+.headline {
+	font-family: $headline-font-family;
+	font-weight: $headline-font-weight-m;
+}
+
+.headline--light {
+	font-weight: $headline-font-weight-r;
+}

@@ -1,0 +1,20 @@
+/* ==========================================================================
+   SCSS MAIN
+   ========================================================================== */
+
+// TOKENS BREAKPOINT
+@use "01-tokens/breakpoints" as *;
+$icomoon-font-paths: "../../fonts/iconfont/fonts" !default;
+
+// TOOLS MQ BREAKPOINT
+@use "sass-mq/mq" as * with ($breakpoints: $breakpoints);
+
+// GENERIC
+@use "03-generic" as GENERIC;
+
+// ELEMENTS
+@use "04-elements" as ELEMENTS;
+
+// COMPONENTS
+@use "../fonts/iconfont/style" as * with ($icomoon-font-path: $icomoon-font-paths);
+@use "06-components" as COMPONENTS;

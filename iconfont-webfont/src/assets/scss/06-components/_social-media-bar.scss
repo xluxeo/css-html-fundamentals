@@ -1,0 +1,19 @@
+@use "../01-tokens" as TOKENS;
+
+$social-media-bar-spacing: TOKENS.$GLOBAL-SPACING-DEFAULT !default;
+$social-media-bar-color: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+
+$social-media-bar-border-radius: 20px !default;
+
+.c-social-media-bar {
+	border-radius: $social-media-bar-border-radius;
+	inline-size: fit-content;
+	padding: $social-media-bar-spacing;
+	background-color: $social-media-bar-color;
+}
+
+.c-social-media-bar__list {
+	display: flex;
+	gap: $social-media-bar-spacing;
+	padding-block: $social-media-bar-spacing;
+}

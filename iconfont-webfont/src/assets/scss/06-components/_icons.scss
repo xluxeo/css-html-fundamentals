@@ -1,0 +1,28 @@
+@use "../01-tokens" as TOKENS;
+
+$icon-font-size: TOKENS.$GLOBAL-FONT-SIZE !default;
+$icon-color: TOKENS.$GLOBAL-COLOR-SECONDARY !default;
+$icon-spacing: TOKENS.$GLOBAL-SPACING-DEFAULT !default;
+
+$icon-border-radius: 50px !default;
+
+.c-icon {
+	/* Font properties - DO NOT REMOVE */
+	font-family: 'icomoon' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	
+	/* Component styling */
+	border-radius: $icon-border-radius;
+	padding: $icon-spacing;
+	font-size: $icon-font-size;
+	background-color: $icon-color;
+}
+
+
